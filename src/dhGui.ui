@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TabWidget</class>
+ <widget class="QTabWidget" name="TabWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>916</width>
+    <height>702</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Damascus_Hawk</string>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="Basic">
+   <attribute name="title">
+    <string>Basic</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="Skills">
+   <attribute name="title">
+    <string>Skills</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="Possessions">
+   <attribute name="title">
+    <string>Possessions</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="Experience">
+   <attribute name="title">
+    <string>Experience</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="CharInfo">
+   <attribute name="title">
+    <string>Character Information</string>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
