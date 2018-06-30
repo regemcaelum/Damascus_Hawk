@@ -6,16 +6,16 @@ DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.Td
 SRCS := $(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))
 OBJS_L :- $(subst .c,.o,$(SRCS))
 #LIBS := $(shell pkg-config --libs)
-
 CFLAGS := -Wall -Wextra -std=gnu99 -I ../include
+
 COMPILE.c = $(CC) $(DEPFLAGS) $(CFLAGS) $(TARGET_ARCH)
 POSTCOMPILE = @mv -f $(DEPDIR)/$*.Td $(DEPDIR)/$*.d && touch $@
 
-release : CFLAGS += -O2
-release : damascusHawk
-all: release
+test : CFLAGS += -ggdb3 -g -O0 -D DEBUG
+test : damascusHawk.so
+all: test
 
-damascusHawk : $(OBJS)
+damascusHawk.so : $(OBJS)
   $(COMPILE.c) -o $@ $^ $(LIBS)
   
  %.o : %.c
