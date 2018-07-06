@@ -1,10 +1,10 @@
-#include <vector>
-#include <ctime>
-#include <cstdlib>
+#include "dice.hpp"
 
-vector<int> roll(int pool, int explode) {
+using namespace std;
+
+std::vector<int> roll(int pool, int explode) {
     vector<int> results(pool);
-    
+
     srand(time(NULL));
     for(int roll = 0; roll < pool; roll++) {
         results.at(roll) = rand()%10+1;

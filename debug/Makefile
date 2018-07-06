@@ -16,16 +16,16 @@ debug : damascusHawk
 all: debug
 
 damascusHawk : $(OBJS)
-  $(COMPILE.c) -o $@ $^ $(LIBS)
-  
+	$(COMPILE.c) -o $@ $^ $(LIBS)
+
  %.o : %.c
  %.o : %.c $(DEPDIR)/%.d
-  $(COMPILE.c) -c $(OUTPUT_OPTIONS) $<
-  $(POSTCOMPILE)
-  
+	$(COMPILE.c) -c $(OUTPUT_OPTIONS) $<
+	$(POSTCOMPILE)
+
 $(DEPDIR)/%.d: ;
 .PRECIOUS: $(DEPDIR)/%.d
 
 .PHONY: clean
 clean:
-  rm -f *.o damascusHawk
+	rm -f *.o damascusHawk
