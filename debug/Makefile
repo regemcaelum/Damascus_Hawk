@@ -5,7 +5,7 @@ $(shell mkdir -p $(DEPDIR) >/dev/null)
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.Td
 SRCS := $(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))
 OBJS_L :- $(subst .c,.o,$(SRCS))
-#LIBS := $(shell pkg-config --libs)
+LIBS := $(shell pkg-config --libs)
 CFLAGS := -Wall -Wextra -std=gnu99 -I ../include
 
 COMPILE.c = $(CC) $(DEPFLAGS) $(CFLAGS) $(TARGET_ARCH)
