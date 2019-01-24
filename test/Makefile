@@ -3,12 +3,12 @@ VPATH := $(SOURCES)
 DEPDIR := .d
 $(shell mkdir -p $(DEPDIR) >/dev/null)
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.Td
-SRCS := $(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))
-OBJS_L :- $(subst .c,.o,$(SRCS))
+SRCS := $(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
+OBJS_L :- $(subst .cpp,.o,$(SRCS))
 #LIBS := $(shell pkg-config --libs)
 CFLAGS := -Wall -Wextra -std=gnu99 -I ../include
 
-COMPILE.c = $(CC) $(DEPFLAGS) $(CFLAGS) $(TARGET_ARCH)
+COMPILE.cpp = $(CXX) $(DEPFLAGS) $(CFLAGS) $(TARGET_ARCH)
 POSTCOMPILE = @mv -f $(DEPDIR)/$*.Td $(DEPDIR)/$*.d && touch $@
 
 test : CFLAGS += -ggdb3 -g -O0 -D DEBUG
@@ -16,11 +16,11 @@ test : damascusHawk.so
 all: test
 
 damascusHawk.so : $(OBJS)
-  $(COMPILE.c) -o $@ $^ $(LIBS)
+  $(COMPILE.cpp) -o $@ $^ $(LIBS)
   
  %.o : %.c
  %.o : %.c $(DEPDIR)/%.d
-  $(COMPILE.c) -c $(OUTPUT_OPTIONS) $<
+  $(COMPILE.cpp) -c $(OUTPUT_OPTIONS) $<
   $(POSTCOMPILE)
   
 $(DEPDIR)/%.d: ;
