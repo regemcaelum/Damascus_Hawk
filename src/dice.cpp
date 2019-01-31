@@ -1,4 +1,4 @@
-#includes "dice.hpp"
+#include "dice.hpp"
 
 using namespace std;
 
