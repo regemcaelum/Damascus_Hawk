@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "characterData.h"
+#include "characterData.hpp"
 
 using namespace std;
 
