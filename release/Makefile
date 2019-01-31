@@ -7,7 +7,7 @@ SRCS := $(foreach dir,$(SOURCES),$(wildcard *.cpp $(dir)/*.cpp))
 OBJS_L :- $(subst .cpp,.o,$(SRCS))
 #LIBS := $(shell pkg-config --libs)
 
-CFLAGS := -Wall -Wextra -std=gnu99 -I ../include
+CFLAGS := -Wall -Wextra -std=gnu++98 -I ../includes
 COMPILE.cpp = $(CXX) $(DEPFLAGS) $(CFLAGS) $(TARGET_ARCH) $(SRCS)
 POSTCOMPILE = @mv -f $(DEPDIR)/$*.Td $(DEPDIR)/$*.d && touch $@
 
