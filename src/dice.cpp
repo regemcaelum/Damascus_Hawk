@@ -2,7 +2,7 @@
 
 using namespace std;
 
-std::vector<int> roll(int pool, int explode) {
+std::vector<int> roll(int pool, int explode = 10) {
     vector<int> results(pool);
 
     srand(time(NULL));
