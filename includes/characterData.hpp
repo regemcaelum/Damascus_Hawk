@@ -14,18 +14,18 @@ class characterData {
     string sex;
     string description;
     int age;
-    
+
     public:
         characterData();
         void setName(string name);
         void setSex(string sex);
         void setDescription(string description);
         void setAge(int age);
-    
+
         string getName() { return name; }
         string getSex() { return sex; }
         string getDescription() { return description; }
-        ing getAge() { return age; }
+        int getAge() { return age; }
 };
 
 // TODO: move next few class to an Attributes.hpp file
@@ -34,7 +34,7 @@ class Attributes {
         int priority;
         int points;
         int spentPoints;
-            
+
     public:
         void setPriority(int level);
         void determinePoints();
@@ -64,7 +64,7 @@ class CharacterAttributes: public MentalAttributes, public SocialAttributes, pub
     SocialAttributes sAttributes;
     MentalAttributes mAttributes;
     PhysicalAttributes pAttributes;
-    
+
     public:
         void resetAttributes();
         void resetAttributes(int type);

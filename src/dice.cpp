@@ -2,13 +2,14 @@
 
 using namespace std;
 
-std::vector<int> roll(int pool, int explode = 10) {
+std::vector<int> roll(int pool, int explode) {
     vector<int> results(pool);
+    vector<int>::iterator die;
 
     srand(time(NULL));
-    for(int roll = 0; roll < pool; roll++) {
-        results.at(roll) = rand()%10+1;
-        if(results.at(roll) >= explode) {
+    for(die = results.begin(); die != results.end(); ++die) {
+        *die = rand()%10+1;
+        if(*die >= explode) {
             pool++;
             results.resize(pool);
         }
