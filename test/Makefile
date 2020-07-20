@@ -5,8 +5,7 @@ $(shell mkdir -p $(DEPDIR) >/dev/null)
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.Td
 SRCS := $(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
 OBJS_L :- $(subst .cpp,.o,$(SRCS))
-#LIBS := $(shell pkg-config --libs)
-CFLAGS := -Wall -Wextra -std=gnu++98 -I ../includes
+CFLAGS := -Wall -Wextra -std=c++17 -I ../includes
 
 COMPILE.cpp = $(CXX) $(DEPFLAGS) $(CFLAGS) $(TARGET_ARCH) $(SRCS)
 POSTCOMPILE = @mv -f $(DEPDIR)/$*.Td $(DEPDIR)/$*.d && touch $@
@@ -16,7 +15,7 @@ test : damascusHawk.so
 all: test
 
 damascusHawk.so : $(OBJS)
-  $(COMPILE.cpp) -o $@ $^ $(LIBS)
+  $(COMPILE.cpp) -o $@ $^
 
  %.o : %.c
  %.o : %.c $(DEPDIR)/%.d
