@@ -2,16 +2,14 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ man ]
+    branches: [ man, feature/** ]
   pull_request:
     branches: [ main ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: make
-      run: make
+      run: make debug
