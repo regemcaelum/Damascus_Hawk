@@ -1,9 +1,9 @@
 #ifndef DICE_HPP_
 #define DICE_HPP_
 
-#includes <vector>
-#includes <ctime>
-#includes <cstdlib>
+#include <vector>
+#include <ctime>
+#include <cstdlib>
 
 #define CRIT 10
 #define SUCCESS_THRESHOLD 7

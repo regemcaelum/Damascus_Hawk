@@ -1,8 +1,8 @@
-#includes <iostream>
-#includes <vector>
-#includes <cstdlib>
-#includes <iterator>
-#includes "dice.hpp"
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <iterator>
+#include "dice.hpp"
 
 using namespace std;
 
