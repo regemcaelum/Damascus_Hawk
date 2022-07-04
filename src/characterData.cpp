@@ -1,22 +1,33 @@
-#include <iostream>
-#include <string>
 #include "characterData.hpp"
 
-using namespace std;
+// Member functions for CharacterData
+CharacterData::CharacterData() {
+    age = 0;
+    size = 5;
+}
 
-class PlayerCharacter {
-    public:
-        // Character Information
-        string player;
-        string concept;
-        string chronicle;
-        string faction;     // Seems to change between game line
-        string groupName;   // Seems to change between game line
-        int virtue;
-        int vice;
-        int experience;
-        int totalExperience;
-    private:
-        CharacterAttributes pcAttributes;
-        CharacterSkills pcSkills;
-};
+CharacterData::CharacterData(string Name, string Sex, string Description, int Age) {
+    name = Name;
+    sex = Sex;
+    description = Description;
+    age = Age;
+    size = 5;
+}
+
+void CharacterData::setName(string value) {
+    name = value;
+}
+
+void CharacterData::setSex(string value) {
+    sex = value;
+}
+
+void CharacterData::setName(string value) {
+    description = value;
+}
+
+void CharacterData::setAge(int value) {
+    age = value;
+}
+
+// Member functions for PlayerCharacter
