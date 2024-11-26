@@ -34,6 +34,9 @@ class CharacterData {
         string getSex() { return sex; }
         string getDescription() { return description; }
         int getAge() { return age; }
+    protected:
+        CharacterAttributes attributes;
+        CharacterSkills skills;
 };
 
 class PlayerCharacter: public CharacterData {
@@ -42,10 +45,8 @@ class PlayerCharacter: public CharacterData {
         string player;
         string concept;
         string chronicle;
-        string groupName;
-        string virtue;
-        string vice;
         int experience;
+        short beats;
         int totalExperience;
         int speed;
         int health;
@@ -59,14 +60,14 @@ class PlayerCharacter: public CharacterData {
         void calcWillpower();
         void calcInitiative();
         void calcDefense();
-    protected:
-        CharacterAttributes attributes;
-        CharacterSkills skills;
 };
 
 class MortalCharacter: public PlayerCharacter {
     public:
+        string virtue;
+        string vice;
         string faction;
+        string groupName;
         int integrity;
 };
 

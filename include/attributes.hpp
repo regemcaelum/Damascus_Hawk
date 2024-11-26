@@ -6,39 +6,20 @@ using namespace std;
 #include "stats.hpp"
 
 class Physical: public Stats{
-    protected:
-        int strength;
-        int dexterity;
-        int stamina;
-    
     public:
-        enum class Attribute { STR, DEX, STAM };
-        void incrament(Attribute attribute);
-        void decrament(Attribute attribute);
+        Physical();
+
 };
 
 class Mental: public Stats{
-    protected:
-        int intelligence;
-        int wits;
-        int resolve;
-    
     public:
-        enum class Attribute { INT, WITS, RES };
-        void incrament(Attribute attribute);
-        void decrament(Attribute attribute);
+        Mental();
 };
 
 class Social: public Stats{
-    protected:
-        int presence;
-        int manipulation;
-        int composure;
-    
     public:
+        Social();
         enum class Attribute { PRES, MANIP, COMP };
-        void incrament(Attribute attribute);
-        void decrament(Attribute attribute);
 };
 
 class CharacterAttributes {
