@@ -57,10 +57,19 @@ class PlayerCharacter: public CharacterData {
         PlayerCharacter();
         PlayerCharacter(string Name, string Sex, string Description, int Age);
         void calcSpeed();
+        short getSpeed() { return speed; }
         void calcHealth();
+        short getHealth() { return health; }
         void calcWillpower();
+        short getWillpower() { return willpower; }
         void calcInitiative();
+        short getInitative() { return initiative; }
         void calcDefense();
+        short getDefense() { return defense; }
+        void addBeats();
+        short getBeats() { return beats; }
+        int getXp() { return experience; }
+        int getTotalXp() { return totalExperience; }
 };
 
 class MortalCharacter: public PlayerCharacter {

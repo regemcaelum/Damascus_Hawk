@@ -33,6 +33,9 @@ void CharacterData::setAge(int value) {
 // Member functions for PlayerCharacter
 PlayerCharacter::PlayerCharacter() {
     CharacterData::CharacterData();
+    PlayerCharacter::beats = 0;
+    PlayerCharacter::experience = 0;
+    PlayerCharacter::totalExperience = 0;
 }
 
 PlayerCharacter::PlayerCharacter(string Name, string Sex, string Description, int Age) {
@@ -61,4 +64,14 @@ void PlayerCharacter::calcDefense() {
         return;
     }
     PlayerCharacter::defense += PlayerCharacter::attributes.mental.stats["wits"];
+}
+
+void PlayerCharacter::addBeats() {
+    PlayerCharacter::beats++;
+    if(PlayerCharacter::beats == 5) {
+        PlayerCharacter::beats = 0;
+        PlayerCharacter::experience++;
+        PlayerCharacter::totalExperience++;
+    }
+
 }
