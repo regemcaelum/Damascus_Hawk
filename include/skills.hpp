@@ -1,6 +1,8 @@
 #ifndef SKILLS_H_
 #define SKILLS_H_
 
+#define MIN_SKILL 0
+
 using namespace std;
 
 #include "stats.hpp"
@@ -8,6 +10,7 @@ using namespace std;
 class Skills: public Stats{
     public:
         void determinePoints();
+        void decrement(string skill);
 };
 
 class Mental: public Skills{

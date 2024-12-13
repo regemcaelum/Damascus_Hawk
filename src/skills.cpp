@@ -12,12 +12,10 @@ void Skills::determinePoints() {
     Skills::priority = 4;
 }
 
-Physical::Physical() {
-    stats = {
-        {"strength", 1},
-        {"dexterity", 1},
-        {"stamina", 1}
-    };
+void Skills::decrement(string skill){
+    if(stats[skill] > MIN_SKILL) {
+        stats[skill]--;
+    }
 }
 
 Mental::Mental() {
@@ -33,10 +31,28 @@ Mental::Mental() {
     };
 }
 
+Physical::Physical() {
+    stats = {
+        {"atheltics", 0},
+        {"brawl", 0},
+        {"drive", 0},
+        {"firearms", 0},
+        {"larceny", 0},
+        {"stealth", 0},
+        {"survival", 0},
+        {"weaponry", 0}
+    };
+}
+
 Social::Social() {
     stats = {
-        {"presence", 1},
-        {"manipulation", 1},
-        {"composure", 1}
+        {"animalKen", 0},
+        {"empathy", 0},
+        {"expression", 0},
+        {"intimidation", 0},
+        {"persuasion", 0},
+        {"socialize", 0},
+        {"streetwise", 0},
+        {"subterfuge", 0}
     };
 }
