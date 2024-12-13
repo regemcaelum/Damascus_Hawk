@@ -1,6 +1,7 @@
 #include "skills.hpp"
 
 void Skills::determinePoints() {
+    Skills::spentPoints = 0;
     if (Skills::priority == 1) {
         Skills::points = 11;
         return;
@@ -13,8 +14,9 @@ void Skills::determinePoints() {
 }
 
 void Skills::decrement(string skill){
-    if(stats[skill] > MIN_SKILL) {
+    if(stats[skill] > MIN_SKILL && Skills::spentPoints > 0) {
         stats[skill]--;
+        spentPoints--;
     }
 }
 

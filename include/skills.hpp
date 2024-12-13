@@ -29,9 +29,10 @@ class Social: public Skills{
 };
 
 class CharacterSkills {
-    Social social;
-    Mental mental;
-    Physical physical;
+    public:
+        Social social;
+        Mental mental;
+        Physical physical;
 };
 
 #endif

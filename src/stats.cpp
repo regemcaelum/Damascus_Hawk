@@ -5,6 +5,7 @@ void Stats::setPriority(short level) {
 }
 
 void Stats::determinePoints() {
+    Stats::spentPoints = 0;
     if (Stats::priority == 1) {
         Stats::points = 5;
         return;
@@ -17,13 +18,15 @@ void Stats::determinePoints() {
 }
 
 void Stats::increment(string stat){
-    if(stats[stat] < MAX_STAT) {
-        stats[stat]++;
+    if(Stats::stats[stat] < MAX_STAT && Stats::spentPoints < Stats::points) {
+        Stats::stats[stat]++;
+        Stats::spentPoints++;
     }
 }
 
 void Stats::decrement(string stat){
-    if(stats[stat] > MIN_STAT) {
-        stats[stat]--;
+    if(Stats::stats[stat] > MIN_STAT && Stats::spentPoints > 0) {
+        Stats::stats[stat]--;
+        Stats::spentPoints--;
     }
 }

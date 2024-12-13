@@ -23,13 +23,12 @@ class Social: public Stats{
 };
 
 class CharacterAttributes {
-    Social social;
-    Mental mental;
-    Physical physical;
-
     public:
         void reset();
         void reset(int type);
+        Social social;
+        Mental mental;
+        Physical physical;
 };
 
 #endif

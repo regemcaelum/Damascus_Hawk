@@ -14,13 +14,13 @@ class Stats {
         short priority;
         short points;
         short spentPoints;
-        unordered_map<string, short> stats;
 
     public:
         void setPriority(short level);
         void determinePoints();
         void increment(string stat);
         void decrement(string stat);
+        unordered_map<string, short> stats;
 };
 
 #endif

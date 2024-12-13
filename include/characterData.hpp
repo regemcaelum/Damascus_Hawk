@@ -48,13 +48,14 @@ class PlayerCharacter: public CharacterData {
         int experience;
         short beats;
         int totalExperience;
-        int speed;
-        int health;
-        int willpower;
-        int initiative;
-        int defense;
+        short speed;
+        short health;
+        short willpower;
+        short initiative;
+        short defense;
 
         PlayerCharacter();
+        PlayerCharacter(string Name, string Sex, string Description, int Age);
         void calcSpeed();
         void calcHealth();
         void calcWillpower();
