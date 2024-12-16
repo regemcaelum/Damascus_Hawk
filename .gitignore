@@ -490,4 +490,6 @@ ASALocalRun/
 #===============================================================================
 # Start Visual Studio Code Ignores
 
-.vscode/*
+.vscode/
+
+doc/
