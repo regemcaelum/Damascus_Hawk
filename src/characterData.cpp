@@ -31,15 +31,16 @@ void CharacterData::setAge(int value) {
 }
 
 // Member functions for PlayerCharacter
-PlayerCharacter::PlayerCharacter() {
-    CharacterData::CharacterData();
+PlayerCharacter::PlayerCharacter() : CharacterData() {
     PlayerCharacter::beats = 0;
     PlayerCharacter::experience = 0;
     PlayerCharacter::totalExperience = 0;
 }
 
-PlayerCharacter::PlayerCharacter(string Name, string Sex, string Description, int Age) {
-    CharacterData::CharacterData(Name, Sex, Description, Age);
+PlayerCharacter::PlayerCharacter(string Name, string Sex, string Description, int Age) : CharacterData(Name, Sex, Description, Age) {
+    PlayerCharacter::beats = 0;
+    PlayerCharacter::experience = 0;
+    PlayerCharacter::totalExperience = 0;
 }
 
 void PlayerCharacter::calcSpeed() {
