@@ -22,7 +22,7 @@ void CharacterData::setSex(string value) {
     sex = value;
 }
 
-void CharacterData::setName(string value) {
+void CharacterData::setDescription(string value) {
     description = value;
 }
 
