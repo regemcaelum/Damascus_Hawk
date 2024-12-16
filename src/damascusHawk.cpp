@@ -13,7 +13,7 @@ int main() {
     rolls.push_back(roll(7));
     rolls.push_back(roll(15));
 
-    for(int i=0; i < rolls.size(); i++) {
+    for(unsigned int i=0; i < rolls.size(); i++) {
       copy(rolls[i].begin(), rolls[i].end(), ostream_iterator<int>(cout, " "));
       cout << endl;
     }
