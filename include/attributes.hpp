@@ -5,20 +5,20 @@ using namespace std;
 
 #include "stats.hpp"
 
-class Physical: public Stats{
+class PhysicalAtt: public Stats{
     public:
-        Physical();
+        PhysicalAtt();
 
 };
 
-class Mental: public Stats{
+class MentalAtt: public Stats{
     public:
-        Mental();
+        MentalAtt();
 };
 
-class Social: public Stats{
+class SocialAtt: public Stats{
     public:
-        Social();
+        SocialAtt();
         enum class Attribute { PRES, MANIP, COMP };
 };
 
@@ -26,9 +26,9 @@ class CharacterAttributes {
     public:
         void reset();
         void reset(int type);
-        Social social;
-        Mental mental;
-        Physical physical;
+        SocialAtt social;
+        MentalAtt mental;
+        PhysicalAtt physical;
 };
 
 #endif

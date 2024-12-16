@@ -13,26 +13,26 @@ class Skills: public Stats{
         void decrement(string skill);
 };
 
-class Mental: public Skills{
+class MentalSkills: public Skills{
     public:
-        Mental();
+        MentalSkills();
 };
 
-class Physical: public Skills{
+class PhysicalSkills: public Skills{
     public:
-        Physical();
+        PhysicalSkills();
 };
 
-class Social: public Skills{
+class SocialSkills: public Skills{
     public:
-        Social();
+        SocialSkills();
 };
 
 class CharacterSkills {
     public:
-        Social social;
-        Mental mental;
-        Physical physical;
+        SocialSkills social;
+        MentalSkills mental;
+        PhysicalSkills physical;
 };
 
 #endif

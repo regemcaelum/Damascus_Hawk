@@ -20,7 +20,7 @@ void Skills::decrement(string skill){
     }
 }
 
-Mental::Mental() {
+MentalSkills::MentalSkills() {
     stats = {
         {"academics", 0},
         {"computer", 0},
@@ -33,7 +33,7 @@ Mental::Mental() {
     };
 }
 
-Physical::Physical() {
+PhysicalSkills::PhysicalSkills() {
     stats = {
         {"atheltics", 0},
         {"brawl", 0},
@@ -46,7 +46,7 @@ Physical::Physical() {
     };
 }
 
-Social::Social() {
+SocialSkills::SocialSkills() {
     stats = {
         {"animalKen", 0},
         {"empathy", 0},

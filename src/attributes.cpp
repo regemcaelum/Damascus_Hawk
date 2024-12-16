@@ -1,6 +1,6 @@
 #include "attributes.hpp"
 
-Physical::Physical() {
+PhysicalAtt::PhysicalAtt() {
     stats = {
         {"strength", 1},
         {"dexterity", 1},
@@ -8,7 +8,7 @@ Physical::Physical() {
     };
 }
 
-Mental::Mental() {
+MentalAtt::MentalAtt() {
     stats = {
         {"intelligence", 1},
         {"wits", 1},
@@ -16,7 +16,7 @@ Mental::Mental() {
     };
 }
 
-Social::Social() {
+SocialAtt::SocialAtt() {
     stats = {
         {"presence", 1},
         {"manipulation", 1},
