@@ -1,5 +1,9 @@
 #include "skills.hpp"
 
+/*!
+    Determines the amount of skill points for the skill group based on the
+    priority set for the skill group.
+*/
 void Skills::determinePoints() {
     Skills::spentPoints = 0;
     if (Skills::priority == 1) {
@@ -13,6 +17,11 @@ void Skills::determinePoints() {
     Skills::priority = 4;
 }
 
+/*!
+    Checks to ensure skills aren't going below the minimum before
+    removing a skill point from the provided skills and adjusting the amount
+    of skill points spent.
+*/
 void Skills::decrement(string skill){
     if(stats[skill] > MIN_SKILL && Skills::spentPoints > 0) {
         stats[skill]--;
@@ -20,6 +29,10 @@ void Skills::decrement(string skill){
     }
 }
 
+/*!
+    Uses the unordered_map of parent class Stats to store the mental
+    skills of the character.
+*/
 MentalSkills::MentalSkills() {
     stats = {
         {"academics", 0},
@@ -33,6 +46,10 @@ MentalSkills::MentalSkills() {
     };
 }
 
+/*!
+    Uses the unordered_map of parent class Stats to store the physical
+    skills of the character.
+*/
 PhysicalSkills::PhysicalSkills() {
     stats = {
         {"atheltics", 0},
@@ -46,6 +63,10 @@ PhysicalSkills::PhysicalSkills() {
     };
 }
 
+/*!
+    Uses the unordered_map of parent class Stats to store the social
+    skills of the character.
+*/
 SocialSkills::SocialSkills() {
     stats = {
         {"animalKen", 0},
