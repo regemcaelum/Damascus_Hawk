@@ -1,8 +1,6 @@
 #ifndef SKILLS_H_
 #define SKILLS_H_
 
-#define MIN_SKILL 0
-
 using namespace std;
 
 #include "stats.hpp"
@@ -13,16 +11,9 @@ using namespace std;
 class Skills: public Stats{
     public:
         /*!
-            \brief Determine the amount of skill points for a skill group.
+            \brief Creates Skills
         */
-        void determinePoints();
-
-        /*!
-            \brief Remove a skill point from a skill
-
-            \param[in] skill    The name of the skill to remove a point from.
-        */
-        void decrement(string skill);
+        Skills();
 };
 
 /*! 
@@ -30,6 +21,9 @@ class Skills: public Stats{
 */
 class MentalSkills: public Skills{
     public:
+        /*!
+            \brief Creates MentalSkills
+        */
         MentalSkills();
 };
 
@@ -38,6 +32,9 @@ class MentalSkills: public Skills{
 */
 class PhysicalSkills: public Skills{
     public:
+        /*!
+            \brief Creates PhysicalSkills
+        */
         PhysicalSkills();
 };
 
@@ -46,6 +43,9 @@ class PhysicalSkills: public Skills{
 */
 class SocialSkills: public Skills{
     public:
+        /*!
+            \brief Creates SocialSkills
+        */
         SocialSkills();
 };
 
