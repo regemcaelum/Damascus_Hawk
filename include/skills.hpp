@@ -54,8 +54,19 @@ class SocialSkills: public Skills{
 */
 class CharacterSkills {
     public:
+        /*!
+            \brief The social skill group
+        */
         SocialSkills social;
+       
+        /*!
+            \brief The mental skill group
+        */
         MentalSkills mental;
+
+        /*!
+            \brief The physical skill group
+        */
         PhysicalSkills physical;
 };
 

@@ -35,10 +35,19 @@ class SocialAtt: public Stats {
 */
 class CharacterAttributes {
     public:
-        void reset();
-        void reset(int type);
+        /*!
+            \brief The social attribute group
+        */
         SocialAtt social;
+
+        /*!
+            \brief The mental attribute group
+        */
         MentalAtt mental;
+
+        /*!
+            \brief The physical attribute group
+        */
         PhysicalAtt physical;
 };
 

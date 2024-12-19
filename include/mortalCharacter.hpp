@@ -6,6 +6,13 @@
 
 #include "playerCharacter.hpp"
 
+/*!
+    \brief A class to handle a Mortal splat Player Character
+
+    This class manages player characters that are of the base mortal splat for 
+    Chronicals of Darkness. This handles the anchors virtue, vice, faction,
+    group name, and the Integrity stat.
+*/
 class MortalCharacter: public PlayerCharacter {
     public:
         /*!

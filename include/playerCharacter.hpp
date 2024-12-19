@@ -6,6 +6,13 @@
 
 #include "characterData.hpp"
 
+/*!
+    \brief A class to handle the Player Characters data
+
+    This class manages a player characters stats that are common throughout all
+    splats. As well as handles calculations and functions that are common 
+    throughout.
+*/
 class PlayerCharacter: public CharacterData {
     public:
         /*!
@@ -101,10 +108,10 @@ class PlayerCharacter: public CharacterData {
         /*!
             \brief Creates PlayerCharacter
 
-            \param[in] name         The character name.
-            \param[in] sex          The gender of the character.
-            \param[in] description  A physical description of the character
-            \param[in] age          How old the character is.
+            \param[in] Name         The character name.
+            \param[in] Sex          The gender of the character.
+            \param[in] Description  A physical description of the character
+            \param[in] Age          How old the character is.
         */
         PlayerCharacter(string Name, string Sex, string Description, int Age);
 

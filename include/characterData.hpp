@@ -65,10 +65,10 @@ class CharacterData {
         /*!
             \brief Creates CharacterData
 
-            \param[in] name         The character name.
-            \param[in] sex          The gender of the character.
-            \param[in] description  A physical description of the character
-            \param[in] age          How old the character is.
+            \param[in] Name         The character name.
+            \param[in] Sex          The gender of the character.
+            \param[in] Description  A physical description of the character
+            \param[in] Age          How old the character is.
         */
         CharacterData(string Name, string Sex, string Description, short Age);
         
