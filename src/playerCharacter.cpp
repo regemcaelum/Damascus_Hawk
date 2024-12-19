@@ -9,6 +9,7 @@ PlayerCharacter::PlayerCharacter() : CharacterData() {
     PlayerCharacter::beats = 0;
     PlayerCharacter::experience = 0;
     PlayerCharacter::totalExperience = 0;
+    PlayerCharacter::aspirations.reserve(3);
 }
 
 /*! 
@@ -25,6 +26,7 @@ PlayerCharacter::PlayerCharacter(string Name,
     PlayerCharacter::beats = 0;
     PlayerCharacter::experience = 0;
     PlayerCharacter::totalExperience = 0;
+    PlayerCharacter::aspirations.reserve(3);
 }
 
 /*!
@@ -93,8 +95,18 @@ void PlayerCharacter::addBeats() {
     }
 }
 
+/*!
+    Removes the completed aspiration and adds a beat.
+*/
 void PlayerCharacter::completeAspiration(int index) {
     PlayerCharacter::aspirations.erase(
         PlayerCharacter::aspirations.begin() + index - 1);
     PlayerCharacter::addBeats();
+}
+
+/*!
+    Addes the new aspiration to the end of the aspiration list 
+*/
+void PlayerCharacter::addAspiration(string value) {
+    PlayerCharacter::aspirations.push_back(value);
 }

@@ -216,6 +216,12 @@ class PlayerCharacter: public CharacterData {
         */
         void completeAspiration(int index);
 
+        /*!
+            \brief Adds a aspiration to the list
+
+            \param[in] value The string to fill into the aspiration list.
+        */
+        void addAspiration(string value);
 };
 
 #endif
