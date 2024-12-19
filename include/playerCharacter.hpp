@@ -28,7 +28,7 @@ class PlayerCharacter: public CharacterData {
 
             A short two word description of the idea behind the character.
         */
-        string concept;
+        string characterConcept;
 
         /*!
             \brief The name of the chronicle
