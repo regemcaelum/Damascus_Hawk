@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "characterData.hpp"
 
@@ -200,6 +201,21 @@ class PlayerCharacter: public CharacterData {
             \return The value contained within the total experience attribute
         */
         int getTotalXp() { return totalExperience; }
+    
+        /*!
+            \brief List of Aspirations
+
+            List of the character aspirations that can be accessed.
+        */
+        vector<string> aspirations;
+
+        /*!
+            \brief Marks an aspiration as complete
+
+            \param[in] index The index of the aspirations to complete.
+        */
+        void completeAspiration(int index);
+
 };
 
 #endif

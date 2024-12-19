@@ -92,3 +92,9 @@ void PlayerCharacter::addBeats() {
         PlayerCharacter::totalExperience++;
     }
 }
+
+void PlayerCharacter::completeAspiration(int index) {
+    PlayerCharacter::aspirations.erase(
+        PlayerCharacter::aspirations.begin() + index - 1);
+    PlayerCharacter::addBeats();
+}
