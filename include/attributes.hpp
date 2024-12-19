@@ -5,29 +5,49 @@ using namespace std;
 
 #include "stats.hpp"
 
-class PhysicalAtt: public Stats{
+/*! 
+    \brief A class to handle physical attributes
+*/
+class PhysicalAtt: public Stats {
     public:
         PhysicalAtt();
 
 };
 
-class MentalAtt: public Stats{
+/*! 
+    \brief A class to handle mental attributes
+*/
+class MentalAtt: public Stats {
     public:
         MentalAtt();
 };
 
-class SocialAtt: public Stats{
+/*! 
+    \brief A class to handle social attributes
+*/
+class SocialAtt: public Stats {
     public:
         SocialAtt();
-        enum class Attribute { PRES, MANIP, COMP };
 };
 
+/*! 
+    \brief A class to gather all attributes and provide operations for them
+*/
 class CharacterAttributes {
     public:
-        void reset();
-        void reset(int type);
+        /*!
+            \brief The social attribute group
+        */
         SocialAtt social;
+
+        /*!
+            \brief The mental attribute group
+        */
         MentalAtt mental;
+
+        /*!
+            \brief The physical attribute group
+        */
         PhysicalAtt physical;
 };
 

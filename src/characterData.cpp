@@ -1,12 +1,23 @@
 #include "characterData.hpp"
 
-// Member functions for CharacterData
+/*!
+    Creates a CharacterData object with the default variables
+    of age set to 0 and size set to 5.
+*/
 CharacterData::CharacterData() {
     age = 0;
     size = 5;
 }
 
-CharacterData::CharacterData(string Name, string Sex, string Description, int Age) {
+/*!
+    Creates a CharacterData object setting the member
+    attributes name, sex, description, and age to the provided values
+    while setting the size to 5.
+*/
+CharacterData::CharacterData(string Name,
+                             string Sex,
+                             string Description,
+                             short Age) {
     name = Name;
     sex = Sex;
     description = Description;
@@ -14,65 +25,34 @@ CharacterData::CharacterData(string Name, string Sex, string Description, int Ag
     size = 5;
 }
 
+/*!
+    Takes in a string variable and fills in the Name member
+    attribute.
+*/
 void CharacterData::setName(string value) {
     name = value;
 }
 
+/*!
+    Takes in a string variable and fills in the Sex member
+    attribute.
+*/
 void CharacterData::setSex(string value) {
     sex = value;
 }
 
+/*!
+    Takes in a string variable and fills in the Description
+    member attribute.
+*/
 void CharacterData::setDescription(string value) {
     description = value;
 }
 
-void CharacterData::setAge(int value) {
+/*!
+    Takes in a string variable and fills in the Age member
+    attribute.
+*/
+void CharacterData::setAge(short value) {
     age = value;
-}
-
-// Member functions for PlayerCharacter
-PlayerCharacter::PlayerCharacter() : CharacterData() {
-    PlayerCharacter::beats = 0;
-    PlayerCharacter::experience = 0;
-    PlayerCharacter::totalExperience = 0;
-}
-
-PlayerCharacter::PlayerCharacter(string Name, string Sex, string Description, int Age) : CharacterData(Name, Sex, Description, Age) {
-    PlayerCharacter::beats = 0;
-    PlayerCharacter::experience = 0;
-    PlayerCharacter::totalExperience = 0;
-}
-
-void PlayerCharacter::calcSpeed() {
-    PlayerCharacter::speed = 5 + PlayerCharacter::attributes.physical.stats["strength"] + PlayerCharacter::attributes.physical.stats["dexterity"];
-}
-
-void PlayerCharacter::calcHealth() {
-    PlayerCharacter::health = PlayerCharacter::size + PlayerCharacter::attributes.physical.stats["stamina"];
-}
-
-void PlayerCharacter::calcWillpower() {    PlayerCharacter::willpower = PlayerCharacter::attributes.social.stats["composure"] + PlayerCharacter::attributes.mental.stats["resolve"];
-}
-
-void PlayerCharacter::calcInitiative() {
-    PlayerCharacter::initiative = PlayerCharacter::attributes.social.stats["composure"] + PlayerCharacter::attributes.physical.stats["dexterity"];
-}
-
-void PlayerCharacter::calcDefense() {
-    PlayerCharacter::defense = PlayerCharacter::skills.physical.stats["Athletics"];
-    if(PlayerCharacter::attributes.physical.stats["dexterity"] > PlayerCharacter::attributes.mental.stats["wits"]) {
-        PlayerCharacter::defense += PlayerCharacter::attributes.physical.stats["dexterity"];
-        return;
-    }
-    PlayerCharacter::defense += PlayerCharacter::attributes.mental.stats["wits"];
-}
-
-void PlayerCharacter::addBeats() {
-    PlayerCharacter::beats++;
-    if(PlayerCharacter::beats == 5) {
-        PlayerCharacter::beats = 0;
-        PlayerCharacter::experience++;
-        PlayerCharacter::totalExperience++;
-    }
-
 }
