@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "characterData.hpp"
 
@@ -27,7 +28,7 @@ class PlayerCharacter: public CharacterData {
 
             A short two word description of the idea behind the character.
         */
-        string concept;
+        string characterConcept;
 
         /*!
             \brief The name of the chronicle
@@ -200,6 +201,34 @@ class PlayerCharacter: public CharacterData {
             \return The value contained within the total experience attribute
         */
         int getTotalXp() { return totalExperience; }
+    
+        /*!
+            \brief List of Aspirations
+
+            List of the character aspirations that can be accessed.
+        */
+        vector<string> aspirations;
+
+        /*!
+            \brief Marks an aspiration as complete
+
+            \param[in] index The index of the aspirations to complete.
+        */
+        void completeAspiration(int index);
+
+        /*!
+            \brief Adds a aspiration to the list
+
+            \param[in] value The string to fill into the aspiration list.
+        */
+        void addAspiration(string value);
+
+        /*!
+            \brief Removes an aspiration
+
+            \param[in] index The index of the aspiration to remove from the list.
+        */
+        void removeAspiration(int index);
 };
 
 #endif
