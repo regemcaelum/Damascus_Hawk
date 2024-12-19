@@ -96,11 +96,11 @@ void PlayerCharacter::addBeats() {
 }
 
 /*!
-    Removes the completed aspiration and adds a beat.
+    Removes the completed aspiration from the aspiration list before adding a
+    beat to the character.
 */
 void PlayerCharacter::completeAspiration(int index) {
-    PlayerCharacter::aspirations.erase(
-        PlayerCharacter::aspirations.begin() + index - 1);
+    PlayerCharacter::removeAspiration(index);
     PlayerCharacter::addBeats();
 }
 
@@ -109,4 +109,12 @@ void PlayerCharacter::completeAspiration(int index) {
 */
 void PlayerCharacter::addAspiration(string value) {
     PlayerCharacter::aspirations.push_back(value);
+}
+
+/*!
+    Removes the indicated aspiration from the aspiration list.
+*/
+void PlayerCharacter::removeAspiration(int index) {
+    PlayerCharacter::aspirations.erase(
+        PlayerCharacter::aspirations.begin() + index - 1);
 }

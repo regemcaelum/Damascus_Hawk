@@ -222,6 +222,13 @@ class PlayerCharacter: public CharacterData {
             \param[in] value The string to fill into the aspiration list.
         */
         void addAspiration(string value);
+
+        /*!
+            \brief Removes an aspiration
+
+            \param[in] index The index of the aspiration to remove from the list.
+        */
+        void removeAspiration(int index);
 };
 
 #endif
