@@ -229,6 +229,27 @@ class PlayerCharacter: public CharacterData {
             \param[in] index The index of the aspiration to remove from the list.
         */
         void removeAspiration(int index);
+
+        /*!
+            \brief Applies a condition to the character.
+
+            \param[in] condition The name of the condition to apply.
+        */
+        void applyConditon(string condition);
+
+        /*!
+            \brief Resolves the mentioned condition.
+
+            \param[in] condition The name of the condition to resolve.
+        */
+        void resolveCondition(string condition);
+
+        /*!
+            \brief Complete a condition's beat stipulation.
+
+            \param[in] condition The name of the condition to get the beat.
+        */
+        void conditionBeat(string condition);
 };
 
 #endif
