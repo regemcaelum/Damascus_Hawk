@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<character xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema conditions.xsd">
+   <conditions>
+      <condition>
+         <name>Amnesia</name>
+         <bonus>0</bonus>
+         <resolution>Something problematic arises, such as a forgotten arrest warrant or old enemy</resolution>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>228</page>
+      </condition>
+      <condition>
+         <name>Blind</name>
+         <bonus>-3</bonus>
+         <resolution>Limitation or difficulty that heightens immediate danger</resolution>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>228</page>
+      </condition>
+      <condition>
+         <name>Broken</name>
+         <bonus>-2</bonus>
+         <beat>You back down from a confrontation or fail a roll due to this Condition. If you regain a dot of Integrity, lose another dot of Integrity, or achieve an exceptional success on a breaking point, you can shed this Condition.</beat>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>228</page>
+      </condition>
+      <condition>
+         <name>Bonded</name>
+         <bonus>2</bonus>
+         <resolution>The bonded animal diew</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>228</page>
+      </condition>
+      <condition>
+         <name>Connected</name>
+         <bonus>2</bonus>
+         <resolution>Condition shed, bridge burned.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>228</page>
+      </condition>
+      <condition>
+         <name>Crippled</name>
+         <bonus>0</bonus>
+         <beat>Danger or severe inhibitation due to the disability</beat>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>228</page>
+      </condition>
+      <condition>
+         <name>Deprived</name>
+         <bonus>-1</bonus>
+         <resolution>Indulge in the deprived Vice, therapy.</resolution>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>228</page>
+      </condition>
+      <condition>
+         <name>Embarrassing Secret</name>
+         <bonus>0</bonus>
+         <resolution>The secret gets out.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>229</page>
+      </condition>
+      <condition>
+         <name>Fugue</name>
+         <bonus>0</bonus>
+         <beat>You suffer the effects of this Condition. If you regain a dot of Integrity, lose another dot of Integrity, or achieve an exceptional success on a breaking point, you can shed this Condition.</beat>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>229</page>
+      </condition>
+      <condition>
+         <name>Guilty</name>
+         <bonus>-2</bonus>
+         <resolution>The character makes restitution for whatever he did; the character confesses his crimes.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>229</page>
+      </condition>
+      <condition>
+         <name>Informed</name>
+         <bonus>0</bonus>
+         <resolution>Use the condition for its benefit.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>229</page>
+      </condition>
+      <condition>
+         <name>Inspired</name>
+         <bonus>0</bonus>
+         <resolution>Use the condition for its benefit.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>229</page>
+      </condition>
+      <condition>
+         <name>Leveraged</name>
+         <bonus>0</bonus>
+         <resolution>Shed the Condition as noted; turn the tables on the person.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>229</page>
+      </condition>
+      <condition>
+         <name>Lost</name>
+         <resolution>Abandoning the goal, successfully navigating</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>229</page>
+      </condition>
+      <condition>
+         <name>Madness</name>
+         <bonus>0</bonus>
+         <beat>The character fails a roll because of this Condition. If you regain a dot of Integrity, lose another dot of Integrity, or achieve an exceptional success on a breaking point, you can shed this Condition.</beat>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>229</page>
+      </condition>
+      <condition>
+         <name>Mute</name>
+         <bonus>0</bonus>
+         <beat>Limitation or communication difficulty that heightens immediate danger.</beat>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>230</page>
+      </condition>
+      <condition>
+         <name>Notoriety</name>
+         <bonus>-2</bonus>
+         <resolution>THe story is debunked or the character's name is cleared.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>230</page>
+      </condition>
+      <condition>
+         <name>Obsession</name>
+         <bonus>0</bonus>
+         <resolution>Fulfilling the obsession, therapy.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>230</page>
+      </condition>
+      <condition>
+         <name>Shaken</name>
+         <bonus>0</bonus>
+         <resolution>Fail a roll, as noted.</resolution>
+         <beat></beat>
+         <persistent></persistent>
+         <source>CofD</source>
+         <page>230</page>
+      </condition>
+      <condition>
+         <name>Soulless</name>
+         <bonus>-2</bonus>
+         <resolution>This Condition is only resolved if the character regains her soul.</resolution>
+         <beat>Gain a beat whenever the character loses Integrity because she indulged her Vice.</beat>
+         <persistent>true</persistent>
+         <source>CofD</source>
+         <page>230</page>
+      </condition>
+      <condition>
+         <name>Spooked</name>
+         <bonus>0</bonus>
+         <resolution>Shed the Condition as noted.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>231</page>
+      </condition>
+      <condition>
+         <name>Steadfast</name>
+         <bonus>0</bonus>
+         <resolution>Use the Condition, as noted</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>231</page>
+      </condition>
+      <condition>
+         <name>Swooned</name>
+         <bonus>2</bonus>
+         <resolution>Do something for the object that puts your character in danger; opt to fail a roll to resist a social action by the object.</resolution>
+         <persistent>false</persistent>
+         <source>CofD</source>
+         <page>231</page>
+      </condition>
+   </conditions>
