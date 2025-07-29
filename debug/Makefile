@@ -36,4 +36,4 @@ $(DEPDIR)/%.d: ;
 
 .PHONY: clean
 clean:
-	RM *.o damascusHawk
+	$(RM) *.o damascusHawk.*
