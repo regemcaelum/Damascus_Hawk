@@ -1,8 +1,16 @@
+ifdef OS
+	RM = del /Q
+	FixPath = $(subst /,\,$1)
+else
+	ifeq ($(shell uname), Linux)
+		RM = rm -f
+		FixPath = $1
+endif
 SOURCES := ../src/
 VPATH := $(SOURCES)
 DEPDIR := .d
 $(shell mkdir -p $(DEPDIR) >/dev/null)
-DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.Td
+DEPFLAGS = -MT $@ -MMD -MP
 SRCS := $(foreach dir,$(SOURCES),$(wildcard *.cpp $(dir)/*.cpp))
 OBJS_L :- $(subst .cpp,.o,$(SRCS))
 
@@ -14,7 +22,7 @@ release : CFLAGS += -O2
 release : damascusHawk
 all: release
 
-damascusHawk : $(OBJS)
+damascusHawk : $(call FixPath,OBJS)
   $(COMPILE.cpp) -o $@ $^
 
  %.o : %.cpp
@@ -27,4 +35,4 @@ $(DEPDIR)/%.d: ;
 
 .PHONY: clean
 clean:
-  rm -f *.o damascusHawk
+  RM *.o damascusHawk

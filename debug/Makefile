@@ -1,16 +1,25 @@
-SOURCES := ../src/
-VPATH := $(SOURCES)
+ifdef OS
+	RM = del /Q
+	FixPath = $(subst /,\,$1)
+else
+	ifeq ($(shell uname), Linux)
+		RM = rm -f
+		FixPath = $1
+	endif
+endif
+SOURCES := ../src
+VPATH := $(call FixPath,$(SOURCES))
 DEPDIR := .d
 $(shell mkdir -p $(DEPDIR) >/dev/null)
-DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.Td
-SRCS := $(foreach dir,$(SOURCES),$(wildcard *.cpp $(dir)/*.cpp))
+DEPFLAGS = -MT $@ -MMD -MP
+SRCS := $(foreach dir,$(VPATH),$(call FixPath,$(wildcard *.cpp $(dir)/*.cpp)))
 OBJS_L := $(subst .cpp,.o,$(SRCS))
-CFLAGS := -Wall -Wextra -std=c++23 -I ../include
+CXXFLAGS := -Wall -Wextra -std=c++23 -I ../include
 
-COMPILE.cpp = $(CXX) $(DEPFLAGS) $(CFLAGS) $(TARGET_ARCH) $(SRCS)
+COMPILE.cpp = $(CXX) $(DEPFLAGS) $(CXXFLAGS) $(SRCS)
 POSTCOMPILE = @mv -f $(DEPDIR)/$*.Td $(DEPDIR)/$*.d && touch $@
 
-debug : CFLAGS += -ggdb3 -g -O0 -D DEBUG
+debug : CXXFLAGS += -ggdb3 -g -O0 -D DEBUG
 debug : damascusHawk
 all: debug
 
@@ -27,4 +36,4 @@ $(DEPDIR)/%.d: ;
 
 .PHONY: clean
 clean:
-	rm -f *.o damascusHawk
+	RM *.o damascusHawk
